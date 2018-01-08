@@ -1,0 +1,57 @@
+body {
+    background-color: whitesmoke;
+}
+
+ul {
+    margin:0;
+    padding:0;
+}
+
+ul li {
+    display:inline-block;
+    margin-left: 30px;
+}
+
+ul li a {
+    text-decoration: none;
+    color:black;
+}
+
+ul li a:hover {
+    color:gray;
+}
+
+div#main {
+    width:600px;
+    margin:auto;
+    text-align: center;
+    
+}
+
+footer {
+    background-color: grey;
+}
+
+main {
+    min-height: 200px;
+}
+
+.nom {
+    height:30px;
+}
+
+.prenom {
+    height:30px;
+}
+
+.email {
+    height:30px;
+}
+
+.password {
+    height:30px;
+}
+
+input {
+    border-radius: 3px;
+}
