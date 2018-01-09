@@ -15,7 +15,7 @@ include_once("./function/callPage.php");
 
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
->>>>>>> Stashed changes
+
    
 </head>
 <body>
