@@ -29,7 +29,7 @@ if(isset($_POST['formulaire'])){
         include("./include/forminscription.php");
     }else {
         $connexion=mysqli_connect("localhost","root","","nfactoryblog");
-        $requete = "INSERT INTO `t_users` (`ID_user`, `USERNAME`, `USERFNAME`, `USERMAIL`, `USERPASSWORD`) VALUES (NULL, $nom, $prenom, $email, $mdp)";
+        $requete = "INSERT INTO `t_users` (`ID_user`, `USERNAME`, `USERFNAME`, `USERMAIL`, `USERPASSWORD`,`USERDATEINS`,`T_ROLES_ID_ROLE`) VALUES (NULL, $nom, $prenom, $email, $mdp,NULL,5)";
     }
     
 } else {
