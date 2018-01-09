@@ -28,8 +28,8 @@ if(isset($_POST['formulaire'])){
         echo($message);
         include("./include/forminscription.php");
     }else {
-        $connexion=mysqli_connect("localhost","root","","blog2");
-        $requete = INSERT INTO `t_users` (`ID_users`, `Nom`, `Prenom`, `Email`, `Password`) VALUES (NULL, $nom, $prenom, $email, $mdp);
+        $connexion=mysqli_connect("localhost","root","","nfactoryblog");
+        $requete = "INSERT INTO `t_users` (`ID_user`, `USERNAME`, `USERFNAME`, `USERMAIL`, `USERPASSWORD`) VALUES (NULL, $nom, $prenom, $email, $mdp)";
     }
     
 } else {
