@@ -5,8 +5,12 @@
     
     
     <title>Blog</title>
-    <link rel="stylesheet" href="../../../../xampp/htdocs/HTML-CSS-JS/HTML-CSS-JS/PHP/PHP/PHP6/assets/css/normalize.css">
-    <link rel="stylesheet" href="../../../../xampp/htdocs/HTML-CSS-JS/HTML-CSS-JS/PHP/PHP/PHP6/assets/css/style.css">
+
+
+
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+>>>>>>> Stashed changes
    
 </head>
 <body>
