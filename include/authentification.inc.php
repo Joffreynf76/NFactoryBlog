@@ -2,17 +2,10 @@
 echo("<h1>Inscription</h1>");
 if(isset($_POST['formulaire'])){
     $tabErreur = array();
-    $nom=$_POST["nom"];
-    $prenom=$_POST["prenom"];
     $email=$_POST["email"];
     $mdp=$_POST["password"];
 
-    if($_POST["nom"] == ""){
-        array_push($tabErreur,"Veuillez saisir votre nom");
-    }
-    if($_POST["prenom"] == ""){
-        array_push($tabErreur,"Veuillez saisir votre prénom");
-    }
+
     if($_POST["email"] == ""){
         array_push($tabErreur,"Veuillez saisir votre email");
     }
@@ -26,18 +19,17 @@ if(isset($_POST['formulaire'])){
         }
         $message .= "</ul>";
         echo($message);
-        include("./include/forminscription.php");
+        include("./include/login.inc.php");
     }else {
         $connexion=mysqli_connect("localhost","root","","NFactoryBlog");
-        $requete = "INSERT INTO t_users (ID_user, USERNAME, USERFNAME, USERMAIL, USERPASSWORD,USERDATEINS,T_ROLES_ID_ROLE) VALUES (NULL, '$nom', '$prenom','$email', 'sha1($mdp)',NULL,5)";
+        $requete = "";
         mysqli_query($connexion,$requete);
         mysqli_close($connexion);
     }
-    
+
 } else {
     echo("Je viens d'ailleurs");
-    include("./include/forminscription.php");
+    include("./include/login.inc.php");
 }
 
 ?>
-
