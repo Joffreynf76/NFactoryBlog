@@ -22,15 +22,21 @@ if(isset($_POST['formulaire2'])){
         include("./include/login.php");
     }else {
         $connexion=mysqli_connect("localhost","root","","NFactoryBlog");
-        $mdp=sha1($mdp);
+        $mdp=sha1($_POST['password']);
         $requete = "SELECT * FROM t_users WHERE USERMAIL='$email' AND USERPASSWORD='$mdp'";
 
+
         mysqli_query($connexion,$requete);
+        if($result=mysqli_query($connexion,$requete)){
+            $row_cnt= mysqli_num_rows($result);
+            echo($row_cnt);
+            mysqli_free_result($result);
+        }
         mysqli_close($connexion);
     }
 
 } else {
-    echo("Je viens d'ailleurs");
+
     include("./include/login.php");
 }
 

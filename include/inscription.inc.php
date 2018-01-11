@@ -29,7 +29,8 @@ if(isset($_POST['formulaire'])){
         include("./include/forminscription.php");
     }else {
         $connexion=mysqli_connect("localhost","root","","NFactoryBlog");
-        $requete = "INSERT INTO t_users (ID_user, USERNAME, USERFNAME, USERMAIL, USERPASSWORD,USERDATEINS,T_ROLES_ID_ROLE) VALUES (NULL, '$nom', '$prenom','$email', 'sha1($mdp)',NULL,5)";
+        $mdp=sha1($_POST['password']);
+        $requete = "INSERT INTO t_users (ID_user, USERNAME, USERFNAME, USERMAIL, USERPASSWORD,USERDATEINS,T_ROLES_ID_ROLE) VALUES (NULL, '$nom', '$prenom','$email', '$mdp',NULL,5)";
         mysqli_query($connexion,$requete);
         mysqli_close($connexion);
     }
