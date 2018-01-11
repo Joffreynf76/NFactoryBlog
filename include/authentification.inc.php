@@ -1,5 +1,5 @@
 <?php
-echo("<h1>Inscription</h1>");
+echo("<h1>Login</h1>");
 if(isset($_POST['formulaire2'])){
     $tabErreur = array();
     $email=$_POST["email"];
