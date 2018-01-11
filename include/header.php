@@ -12,5 +12,6 @@ session_start();
 $message="Bienvenue ";
 $message .= $_SESSION['email'];
 echo($message);
+
 ?>
 </header>
