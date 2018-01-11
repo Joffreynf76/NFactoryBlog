@@ -19,7 +19,7 @@ if(isset($_POST['formulaire2'])){
         }
         $message .= "</ul>";
         echo($message);
-        include("./include/login.inc.php");
+        include("./include/login.php");
     }else {
         $connexion=mysqli_connect("localhost","root","","NFactoryBlog");
         $mdp=sha1($mdp);
@@ -31,7 +31,7 @@ if(isset($_POST['formulaire2'])){
 
 } else {
     echo("Je viens d'ailleurs");
-    include("./include/login.inc.php");
+    include("./include/login.php");
 }
 
 ?>
