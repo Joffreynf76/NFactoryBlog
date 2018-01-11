@@ -1,4 +1,5 @@
 <?php
+
 echo("<h1>Login</h1>");
 if(isset($_POST['formulaire2'])){
     $tabErreur = array();
@@ -33,6 +34,8 @@ if(isset($_POST['formulaire2'])){
             mysqli_free_result($result);
         }
         mysqli_close($connexion);
+        session_start();
+        $_SESSiON['email']=$email;
     }
 
 } else {
