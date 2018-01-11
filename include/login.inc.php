@@ -9,6 +9,6 @@ echo("<h1>Login</h1>");
         <label for="password">Mot de passe : </label><input type="password" name="password">
     </div>
     <div class="bouton">
-        <input type="submit" value="Connexion" name="formulaire">
+        <input type="submit" value="Connexion" name="formulaire2">
     </div>
 </form>

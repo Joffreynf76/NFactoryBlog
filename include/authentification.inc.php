@@ -1,6 +1,6 @@
 <?php
 echo("<h1>Inscription</h1>");
-if(isset($_POST['formulaire'])){
+if(isset($_POST['formulaire2'])){
     $tabErreur = array();
     $email=$_POST["email"];
     $mdp=$_POST["password"];
@@ -22,7 +22,9 @@ if(isset($_POST['formulaire'])){
         include("./include/login.inc.php");
     }else {
         $connexion=mysqli_connect("localhost","root","","NFactoryBlog");
-        $requete = "";
+        $mdp=sha1($mdp);
+        $requete = "SELECT * FROM t_users WHERE USERMAIL='$email' AND USERPASSWORD='$mdp'";
+
         mysqli_query($connexion,$requete);
         mysqli_close($connexion);
     }
