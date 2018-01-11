@@ -35,7 +35,7 @@ if(isset($_POST['formulaire2'])){
         }
         mysqli_close($connexion);
         session_start();
-        $_SESSiON['email']=$email;
+        $_SESSION['email']=$email;
     }
 
 } else {

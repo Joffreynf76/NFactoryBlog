@@ -9,6 +9,8 @@
     </ul>
 <?php
 session_start();
-echo("Bienvenue" . $_SESSION['email']);
+$message="Bienvenue ";
+$message .= $_SESSION['email'];
+echo($message);
 ?>
 </header>
