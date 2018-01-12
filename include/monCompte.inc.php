@@ -1,1 +1,2 @@
 <?php
+echo("Page membre");
