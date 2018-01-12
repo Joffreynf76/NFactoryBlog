@@ -27,15 +27,20 @@ if(isset($_POST['formulaire2'])){
         $requete = "SELECT * FROM t_users WHERE USERMAIL='$email' AND USERPASSWORD='$mdp'";
 
 
-        mysqli_query($connexion,$requete);
+
         if($result=mysqli_query($connexion,$requete)){
-            $row_cnt= mysqli_num_rows($result);
-            echo($row_cnt);
-            mysqli_free_result($result);
+            if(mysqli_num_rows($result) >0 ){
+                $_SESSION['login']=1;
+                echo "<a href=\"index.php?page=accueil\">Vous êtes bien identifié</a>";
+            }
+            else {
+                $_SESSION['login']=0;
+
+            }
         }
         mysqli_close($connexion);
-        session_start();
-        $_SESSION['email']=$email;
+
+
     }
 
 } else {
