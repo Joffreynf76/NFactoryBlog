@@ -16,6 +16,7 @@ include_once("./function/callPage.php");
 
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/function.js"></script>
 
    
 </head>
