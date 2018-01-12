@@ -1,7 +1,7 @@
 <?php
 
 echo("<h1>Article</h1>");
-
+if(isset($_SESSION['login'])) {
     if (isset($_POST['formulaire3'])) {
         $tabErreur = array();
         $titre = $_POST["titre"];
@@ -43,3 +43,6 @@ echo("<h1>Article</h1>");
 
         include("./include/formarticle.php");
     }
+}else {
+    echo("Veuillez vous connecter");
+}
