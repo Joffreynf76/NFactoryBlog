@@ -6,10 +6,10 @@
         <label for="chapo">Sous titre : </label><input type="text" name="chapo">
     </div>
     <div class="contenu">
-        <label for="contenu">Contenu article :</label><input type="textarea" name="contenu">
+        <label for="contenu">Contenu article :</label><textarea name="contenu"></textarea>
     </div>
     <div class="date">
-        <label for="date">Date : </label><input type="text" name="titre">
+        <label for="date">Date : </label><input type="date" name="date">
     </div>
     <div class="bouton">
         <input type="submit" value="Publier" name="formulaire3">
