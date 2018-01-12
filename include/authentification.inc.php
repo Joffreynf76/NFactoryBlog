@@ -32,6 +32,7 @@ if(isset($_POST['formulaire2'])){
             if(mysqli_num_rows($result) >0 ){
                 $_SESSION['login']=1;
                 echo "<a href=\"index.php?page=accueil\">Vous êtes bien identifié</a>";
+
             }
             else {
                 $_SESSION['login']=0;
