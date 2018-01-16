@@ -35,10 +35,10 @@ if(isset($_SESSION['login'])) {
             include("./include/formarticle.php");
         } else {
             $connexion = mysqli_connect("localhost", "root", "", "NFactoryBlog");
-            $contenu= addslashes(htmlentities($contenu,ENT_HTML5,'utf-8'));
-            $chapo=addslashes(utf8_decode($chapo));
-            $titre=addslashes(utf8_decode($titre));
-            $requete2 = "INSERT INTO t_articles (ID_ARTICLE, ARTTITRE, ARTCHAPO, ARTCONTENU, ARTDATE) VALUES (NULL, '$titre', '$chapo','$contenu', '$date')";
+            $contenu= addslashes(htmlentities($contenu));
+            $chapo=addslashes(utf8_decode(htmlentities($chapo)));
+            $titre=addslashes(utf8_decode(htmlentities($titre)));
+            $requete2 = "INSERT INTO t_articles (ID_ARTICLE, ARTTITRE, ARTCHAPO, ARTCONTENU, ARTDATE) VALUES (NULL, '$titre', '$chapo','$contenu', NOW())";
             mysqli_query($connexion, $requete2);
             mysqli_close($connexion);
         }
