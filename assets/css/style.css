@@ -55,3 +55,8 @@ main {
 input {
     border-radius: 3px;
 }
+
+form div label {
+    float:left;
+    width:100px;
+}

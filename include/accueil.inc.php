@@ -17,7 +17,7 @@ echo("<h1>Accueil</h1>");
     echo ("<hr>");
 
  }
-
+mysqli_close($connexion);
 
 ?>
 </main>
