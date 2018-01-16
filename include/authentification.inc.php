@@ -37,7 +37,8 @@ if(isset($_POST['formulaire2'])){
 
             }
             else {
-                $_SESSION['login']=0;
+                //$_SESSION['login']=0;
+                echo("erreur");
 
             }
         }

@@ -14,6 +14,9 @@
     <div class="date">
         <label for="date">Date : </label><input type="date" name="date">
     </div>
+    <div class="auteur">
+        <label for="auteur">Auteur : </label><input type="text" name="auteur">
+    </div>
     <div class="bouton">
         <input type="submit" value="Publier" name="formulaire3">
     </div>

@@ -8,6 +8,7 @@ if(isset($_SESSION['login'])) {
         $chapo = $_POST["chapo"];
         $contenu = $_POST["contenu"];
         $date = $_POST["date"];
+        $auteur=$_POST["auteur"];
 
 
 
@@ -22,6 +23,9 @@ if(isset($_SESSION['login'])) {
         }
         if ($date == "") {
             array_push($tabErreur, "Veuillez saisir une date");
+        }
+        if($auteur==""){
+            array_push($tabErreur,"Veuillez saisir un auteur");
         }
 
 
@@ -38,7 +42,7 @@ if(isset($_SESSION['login'])) {
             $contenu= addslashes(htmlentities($contenu));
             $chapo=addslashes(utf8_decode(htmlentities($chapo)));
             $titre=addslashes(utf8_decode(htmlentities($titre)));
-            $requete2 = "INSERT INTO t_articles (ID_ARTICLE, ARTTITRE, ARTCHAPO, ARTCONTENU, ARTDATE) VALUES (NULL, '$titre', '$chapo','$contenu', NOW())";
+            $requete2 = "INSERT INTO t_articles (ID_ARTICLE, ARTTITRE, ARTCHAPO, ARTCONTENU,ARTAUTEUR, ARTDATE) VALUES (NULL, '$titre', '$chapo','$contenu','$auteur', NOW())";
             mysqli_query($connexion, $requete2);
             mysqli_close($connexion);
         }
