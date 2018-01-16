@@ -29,10 +29,20 @@ if(isset($_POST['formulaire'])){
         include("./include/forminscription.php");
     }else {
         $connexion=mysqli_connect("localhost","root","","NFactoryBlog");
-        $mdp=sha1($_POST['password']);
-        $requete = "INSERT INTO t_users (ID_user, USERNAME, USERFNAME, USERMAIL, USERPASSWORD,USERDATEINS,T_ROLES_ID_ROLE) VALUES (NULL, '$nom', '$prenom','$email', '$mdp',NULL,5)";
-        mysqli_query($connexion,$requete);
-        mysqli_close($connexion);
+        $requeteLogin=("SELECT * FROM t_users WHERE USERMAIL='$email'");
+        if($result=mysqli_query($connexion,$requeteLogin)) {
+            if (mysqli_num_rows($result) != 0) {
+                echo "Votre email est déja utilisé";
+            } else {
+
+                $mdp = sha1($_POST['password']);
+                $requete = "INSERT INTO t_users (ID_user, USERNAME, USERFNAME, USERMAIL, USERPASSWORD,USERDATEINS,T_ROLES_ID_ROLE) VALUES (NULL, '$nom', '$prenom','$email', '$mdp',NULL,5)";
+                mysqli_query($connexion, $requete);
+                mysqli_close($connexion);
+            }
+        }else{
+            die($requeteLogin);
+        }
     }
     
 } else {

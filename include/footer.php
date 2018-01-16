@@ -1,5 +1,7 @@
 <footer>
+    <p class="footer" style="text-align: center;">
 <?php 
-echo("<p>&copy; NFactory School</p>");
+echo("&copy; NFactory School");
 ?>
+    </p>
 </footer>

@@ -22,7 +22,7 @@ ul li a:hover {
 }
 
 div#main {
-    width:600px;
+    width:960px;
     margin:auto;
     text-align: center;
     
@@ -60,3 +60,9 @@ form div label {
     float:left;
     width:100px;
 }
+
+p{
+    text-align: justify;
+
+}
+
