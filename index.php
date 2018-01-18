@@ -1,5 +1,13 @@
 <?php
+
 session_start();
+if (isset($_COOKIE['visite'])) {
+    setCookie('visite', $_COOKIE['visite'] + 1,time()+ 3600);
+} else {
+    setCookie('visite', 1);
+
+}
+echo ($_COOKIE['visite']);
 include_once("./function/callPage.php");
 
 
