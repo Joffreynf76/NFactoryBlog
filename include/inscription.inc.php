@@ -2,8 +2,8 @@
 echo("<h1>Inscription</h1>");
 if(isset($_POST['formulaire'])){
     $tabErreur = array();
-    $nom=$_POST["nom"];
-    $prenom=$_POST["prenom"];
+    $nom=trim($_POST["nom"]);
+    $prenom=trim($_POST["prenom"]);
     $email=$_POST["email"];
     $mdp=$_POST["password"];
 
@@ -13,7 +13,7 @@ if(isset($_POST['formulaire'])){
     if($_POST["prenom"] == ""){
         array_push($tabErreur,"Veuillez saisir votre prénom");
     }
-    if($_POST["email"] == ""){
+    if($_POST["email"] == "" || !filter_var($email,FILTER_VALIDATE_EMAIL)){
         array_push($tabErreur,"Veuillez saisir votre email");
     }
     if($_POST["password"] == ""){
