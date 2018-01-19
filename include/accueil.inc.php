@@ -16,7 +16,7 @@ echo("<h1>Accueil</h1>");
      echo("<p>");
      echo (html_entity_decode($donnees['ARTCONTENU']));
      echo("</p>");
-     echo ($donnees['ARTDATE']);
+     echo $donnees['ARTDATE'];
      echo " ";
      echo ($donnees['ARTAUTEUR']);
      echo("<hr>");
