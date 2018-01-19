@@ -19,6 +19,7 @@ if(isset($_SESSION['admin'])){
             $requete2 = "UPDATE t_users SET T_ROLES_ID_ROLE='$choix' WHERE ID_USER='$id'";
             mysqli_query($connexion, $requete2);
         }
+        mysqli_close($connexion);
     }
 } else {
     echo "erreur";
