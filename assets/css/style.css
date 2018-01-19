@@ -25,6 +25,7 @@ div#main {
     width:960px;
     margin:auto;
     text-align: center;
+    height: 900px;
     
 }
 
@@ -33,7 +34,7 @@ footer {
 }
 
 main {
-    min-height: 200px;
+    min-height: 500px;
 }
 
 .nom {
