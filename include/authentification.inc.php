@@ -22,16 +22,22 @@ if(isset($_POST['formulaire2'])){
         echo($message);
         include("./include/login.php");
     }else {
-        $connexion=mysqli_connect("localhost","root","","NFactoryBlog");
+        $dsn = "mysql:dbname=NFactoryBlog;
+        host=localhost;
+        charset=utf8";
+        $username = "root";
+        $password = "";
+        $db = new PDO($dsn,$username,$password);
         $mdp=sha1($_POST['password']);
         $requete = "SELECT * FROM t_users WHERE USERMAIL='$email' AND USERPASSWORD='$mdp'";
 
 
 
-        if($result=mysqli_query($connexion,$requete)){
-            if(mysqli_num_rows($result) >0 ){
+        if($result= $db -> query($requete)){
+            $count= $result -> rowCount();
+            if($count >0 ){
                 $_SESSION['login']=1;
-                while($donnees=mysqli_fetch_array($result)){
+                while($donnees= $result -> fetch()){
                     if($donnees['T_ROLES_ID_ROLE']==1 || $donnees['T_ROLES_ID_ROLE']==2){
                         echo ("<script>redirection(\"index.php?page=admin\")</script>");
                         $_SESSION['admin']=1;
@@ -52,7 +58,7 @@ if(isset($_POST['formulaire2'])){
             }
 
         }
-        mysqli_close($connexion);
+        unset($db);
 
 
     }
