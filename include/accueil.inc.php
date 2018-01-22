@@ -1,12 +1,18 @@
 <main>
 <?php 
 echo("<h1>Accueil</h1>");
- $connexion = mysqli_connect("localhost", "root", "", "NFactoryBlog");
- $reponse = mysqli_query($connexion,"SELECT * FROM t_articles ORDER BY ARTDATE DESC LIMIT 1,2");
+$dsn = "mysql:dbname=NFactoryBlog;
+        host=localhost;
+        charset=utf8";
+$username = "root";
+$password = "";
+$db = new PDO($dsn,$username,$password);
+$requete = "SELECT * FROM t_articles ORDER BY ARTDATE DESC LIMIT 1,2";
+$result = $db -> query($requete);
 
 
 
- while ($donnees= mysqli_fetch_array($reponse)){
+ while ($donnees= $result -> fetch()){
      echo "<h2>";
      echo (html_entity_decode($donnees['ARTTITRE']));
      echo "</h2>";
@@ -22,7 +28,7 @@ echo("<h1>Accueil</h1>");
      echo("<hr>");
 
  }
-mysqli_close($connexion);
+unset($db);
 
 ?>
 </main>
