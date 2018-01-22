@@ -38,13 +38,18 @@ if(isset($_SESSION['login'])) {
             echo($message);
             include("./include/formarticle.php");
         } else {
-            $connexion = mysqli_connect("localhost", "root", "", "NFactoryBlog");
+            $dsn = "mysql:dbname=NFactoryBlog;
+                    host=localhost;
+                    charset=utf8";
+            $username = "root";
+            $password = "";
+            $db = new PDO($dsn,$username,$password);
             $contenu= addslashes(htmlentities($contenu));
             $chapo=addslashes(utf8_decode(htmlentities($chapo)));
             $titre=addslashes(utf8_decode(htmlentities($titre)));
             $requete2 = "INSERT INTO t_articles (ID_ARTICLE, ARTTITRE, ARTCHAPO, ARTCONTENU,ARTAUTEUR, ARTDATE) VALUES (NULL, '$titre', '$chapo','$contenu','$auteur', NOW())";
-            mysqli_query($connexion, $requete2);
-            mysqli_close($connexion);
+            $db -> query($requete2);
+            unset($db);
         }
 
     } else {

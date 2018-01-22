@@ -9,7 +9,7 @@
             echo("<li><a href=\"index.php?page=authentification\">Login</a></li>");
         else {
             echo("<li><a href=\"index.php?page=logout\">Logout</a></li>");
-            echo("<li><a href=\"index.php?page=monCompte\">Mon compte</a></li>");
+
         }
         ?>
         <li><a href="index.php?page=article">Article</a></li>
