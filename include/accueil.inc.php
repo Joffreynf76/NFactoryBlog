@@ -7,8 +7,10 @@ $dsn = "mysql:dbname=NFactoryBlog;
 $username = "root";
 $password = "";
 $db = new PDO($dsn,$username,$password);
-$requete = "SELECT * FROM t_articles ORDER BY ARTDATE DESC LIMIT 1,2";
+$requete = "SELECT * FROM t_articles LEFT JOIN t_categories_has_t_articles
+ ON t_articles.ID_ARTICLE=t_categories_has_t_articles.T_ARTICLES_ID_ARTICLE LEFT JOIN t_categories ON t_categories_has_t_articles.T_CATEGORIEs_ID_CATEGORIE=t_categories.ID_CATEGORIE";
 $result = $db -> query($requete);
+
 
 
 
@@ -25,6 +27,8 @@ $result = $db -> query($requete);
      echo $donnees['ARTDATE'];
      echo " ";
      echo ($donnees['ARTAUTEUR']);
+
+     echo("<p>".$donnees['CATLIBELLE']."</p>");
      echo("<hr>");
 
  }
