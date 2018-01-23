@@ -28,12 +28,7 @@ if(isset($_POST['formulaire'])){
         echo($message);
         include("./include/forminscription.php");
     }else {
-        $dsn = "mysql:dbname=NFactoryBlog;
-        host=localhost;
-        charset=utf8";
-        $username = "root";
-        $password = "";
-        $db = new PDO($dsn,$username,$password);
+        $db=connectionPDO('localhost' , 'NFactoryBlog' , 'root' , '');
         $requeteLogin=("SELECT * FROM t_users WHERE USERMAIL='$email'");
         if($result = $db -> query($requeteLogin)) {
             $count = $result -> rowCount();

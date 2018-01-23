@@ -22,12 +22,7 @@ if(isset($_POST['formulaire2'])){
         echo($message);
         include("./include/login.php");
     }else {
-        $dsn = "mysql:dbname=NFactoryBlog;
-        host=localhost;
-        charset=utf8";
-        $username = "root";
-        $password = "";
-        $db = new PDO($dsn,$username,$password);
+        $db=connectionPDO('localhost' , 'NFactoryBlog' , 'root' , '');
         $mdp=sha1($_POST['password']);
         $requete = "SELECT * FROM t_users WHERE USERMAIL='$email' AND USERPASSWORD='$mdp'";
 

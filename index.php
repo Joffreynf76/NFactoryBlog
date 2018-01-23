@@ -9,6 +9,7 @@ if (isset($_COOKIE['visite'])) {
 }
 echo ($_COOKIE['visite']);
 include_once("./function/callPage.php");
+include_once("./function/connectionPDO.php");
 
 
 ?>
@@ -39,6 +40,8 @@ include_once("./function/callPage.php");
     <div id="main">
     <?php
     callPage();
+
+
 
         
     ?>

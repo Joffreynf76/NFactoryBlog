@@ -38,12 +38,7 @@ if(isset($_SESSION['login'])) {
             echo($message);
             include("./include/formarticle.php");
         } else {
-            $dsn = "mysql:dbname=NFactoryBlog;
-                    host=localhost;
-                    charset=utf8";
-            $username = "root";
-            $password = "";
-            $db = new PDO($dsn,$username,$password);
+            $db=connectionPDO('localhost' , 'NFactoryBlog' , 'root' , '');
             $contenu= addslashes(htmlentities($contenu));
             $chapo=addslashes(utf8_decode(htmlentities($chapo)));
             $titre=addslashes(utf8_decode(htmlentities($titre)));
