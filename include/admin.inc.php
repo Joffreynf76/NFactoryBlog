@@ -7,8 +7,8 @@ if(isset($_SESSION['admin'])){
         echo "<table>";
         while ($donnees = $result ->fetch()) {
             echo("<tr><td>" . $donnees['ID_USER'] . "</td>" . "<td>" . $donnees['USERNAME'] . "</td>" . "<td>" . $donnees['USERFNAME'] . "</td>" . "<td>" . $donnees['USERMAIL']
-                . "</td>" . "<td>" . $donnees['T_ROLES_ID_ROLE'] . "</td>" . "<td>" . "<form method='post' action='#'>" . "<select name='select'><option value='1'>1</option>
-                <option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option>
+                . "</td>" . "<td>" . $donnees['T_ROLES_ID_ROLE'] . "</td>" . "<td>" . "<form method='post' action='#'>" . "<select name='select'><option value='0'>Role</option><option value='1'>Super Admin</option>
+                <option value='2'>Admin</option><option value='3'>Modérateur</option><option value='4'>Rédacteur</option><option value='5'>Utilisateur</option>
                 </select> " . "</td>" . "<td>" . "<input type='text' name='id'>" . "<input type='submit' value='Mettre a jour' name='formulaire'>" . "</form>" . "</td>" . "</tr>");
 
         }
