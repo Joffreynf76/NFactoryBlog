@@ -1,21 +1,23 @@
 
 <header>
     <ul>
-        <li><a href="index.php?page=accueil">Accueil</a></li>
-        <li><a href="index.php?page=inscription">Inscription</a></li>
+        <li><a href="index.php?page=accueil"><i class="fa fa-home" aria-hidden="true"></i> Accueil</a></li>
+
         <?php
 
-        if (!isset($_SESSION['login']))
-            echo("<li><a href=\"index.php?page=authentification\">Login</a></li>");
-        else {
-            echo("<li><a href=\"index.php?page=logout\">Logout</a></li>");
+        if (!isset($_SESSION['login'])) {
+            echo("<li><a href=\"index.php?page=inscription\"><i class=\"fa fa-address-book\" aria-hidden=\"true\"></i> Inscription</a></li>");
+            echo("<li><a href=\"index.php?page=authentification\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"></i> Login</a></li>");
+
+        } else {
+            echo("<li><a href=\"index.php?page=logout\"><i class=\"fa fa-sign-out\" aria-hidden=\"true\"></i> Logout</a></li>");
 
         }
         ?>
-        <li><a href="index.php?page=article">Article</a></li>
+        <li><a href="index.php?page=article"><i class="fa fa-file-text" aria-hidden="true"></i> Article</a></li>
         <?php
             if(isset($_SESSION['admin'])){
-                echo("<li><a href=\"index.php?page=admin\">Administration</a></li>");
+                echo("<li><a href=\"index.php?page=admin\"><i class=\"fa fa-cogs\" aria-hidden=\"true\"></i> Administration</a></li>");
             }
         ?>
 
