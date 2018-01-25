@@ -8,9 +8,12 @@
         if (!isset($_SESSION['login'])) {
             echo("<li><a href=\"index.php?page=inscription\"><i class=\"fa fa-address-book\" aria-hidden=\"true\"></i> Inscription</a></li>");
             echo("<li><a href=\"index.php?page=authentification\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"></i> Login</a></li>");
+            echo("<li><a href=\"index.php?page=contact\"><i class=\"fa fa-comment\" aria-hidden=\"true\"></i> Contact</a></li>");
+
 
         } else {
             echo("<li><a href=\"index.php?page=logout\"><i class=\"fa fa-sign-out\" aria-hidden=\"true\"></i> Logout</a></li>");
+            echo("<li><a href=\"index.php?page=contact\"><i class=\"fa fa-comment\" aria-hidden=\"true\"></i> Contact</a></li>");
 
         }
         ?>
