@@ -33,9 +33,14 @@ if(isset($_POST['formulaire2'])){
             if($count >0 ){
                 $_SESSION['login']=1;
                 while($donnees= $result -> fetch()){
+
                     if($donnees['T_ROLES_ID_ROLE']==1 || $donnees['T_ROLES_ID_ROLE']==2){
                         echo ("<script>redirection(\"index.php?page=admin\")</script>");
                         $_SESSION['admin']=1;
+                    }
+                    if($donnees['T_ROLES_ID_ROLE']==4){
+                        echo ("<script>redirection(\"index.php?page=accueil\")</script>");
+                        $_SESSION['admin']=2;
                     }
                     else {
                         echo ("<script>redirection(\"index.php?page=accueil\")</script>");

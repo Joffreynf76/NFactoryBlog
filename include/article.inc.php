@@ -1,7 +1,7 @@
 <?php
 
 echo("<h1>Article</h1>");
-if(isset($_SESSION['login'])) {
+if(isset($_SESSION['admin'])) {
     if (isset($_POST['formulaire3'])) {
         $tabErreur = array();
         $titre = $_POST["titre"];
@@ -52,5 +52,5 @@ if(isset($_SESSION['login'])) {
         include("./include/formarticle.php");
     }
 }else {
-    echo("Veuillez vous connecter");
+    echo("Vous n'avez pas les privilèges requis");
 }
