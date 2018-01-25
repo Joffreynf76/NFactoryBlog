@@ -25,7 +25,7 @@ $premiereEntree = ($pageActuelle-1)*$articleParPage;
 $requete = "SELECT * FROM t_articles LEFT JOIN t_categories_has_t_articles
 ON t_articles.ID_ARTICLE=t_categories_has_t_articles.T_ARTICLES_ID_ARTICLE LEFT JOIN t_categories ON t_categories_has_t_articles.T_CATEGORIEs_ID_CATEGORIE=t_categories.ID_CATEGORIE LIMIT $premiereEntree,$articleParPage";
 $result = $db->query($requete);
-//$retourArticle = $db ->query("SELECT * FROM t_articles LIMIT 0,5");
+
 
  while ($donnees= $result -> fetch()){
      echo "<h2>";
@@ -40,8 +40,16 @@ $result = $db->query($requete);
      echo $donnees['ARTDATE'];
      echo " ";
      echo ($donnees['ARTAUTEUR']);
+     if($donnees['CATLIBELLE']=='Web'){
+         $id=2;
+         echo("<p><a href='index.php?page=catArticle&amp;id=.$id.'>".$donnees['CATLIBELLE']."</a></p>");
+     }
+     else {
+         $id=1;
+         echo("<p><a href='index.php?page=catArticle&amp;id=.$id.'>".$donnees['CATLIBELLE']."</a></p>");
 
-     echo("<p>".$donnees['CATLIBELLE']."</p>");
+     }
+
      echo("<hr>");
 
  }
