@@ -1,0 +1,69 @@
+body {
+    background-color: whitesmoke;
+}
+
+ul {
+    margin:0;
+    padding:0;
+}
+
+ul li {
+    display:inline-block;
+    margin-left: 30px;
+}
+
+ul li a {
+    text-decoration: none;
+    color:black;
+}
+
+ul li a:hover {
+    color:gray;
+}
+
+div#main {
+    width:960px;
+    margin:auto;
+    text-align: center;
+    height: 900px;
+    
+}
+
+footer {
+    background-color: grey;
+}
+
+main {
+    min-height: 500px;
+}
+
+.nom {
+    height:30px;
+}
+
+.prenom {
+    height:30px;
+}
+
+.email {
+    height:30px;
+}
+
+.password {
+    height:30px;
+}
+
+input {
+    border-radius: 3px;
+}
+
+form div label {
+    float:left;
+    width:100px;
+}
+
+p{
+    text-align: justify;
+
+}
+
