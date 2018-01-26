@@ -25,6 +25,14 @@ if(isset($_POST['contact'])){
         echo($message);
         include("./include/formContact.php");
     }else {
+        //$to      = '16978@csmrouen.net';
+
+
+        $headers = 'From: me@example.com' . "\r\n" .
+            'Reply-To: 16978@csmrouen.net' . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+
+        mail($email, $sujet, $message, $headers);
 
     }
 } else {
