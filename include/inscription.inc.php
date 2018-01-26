@@ -35,11 +35,14 @@ if(isset($_POST['formulaire'])){
             if ($count != 0) {
                 echo "Votre email est déja utilisé";
             } else {
-
-                $mdp = sha1($_POST['password']);
-                $requete = "INSERT INTO t_users (ID_user, USERNAME, USERFNAME, USERMAIL, USERPASSWORD,USERDATEINS,T_ROLES_ID_ROLE) VALUES (NULL, '$nom', '$prenom','$email', '$mdp',NULL,5)";
-                $db -> query($requete);
-                unset($db);
+                if($_POST['captcha'] != $_SESSION['captcha']){
+                    echo "erreur captcha";
+                }else {
+                    $mdp = sha1($_POST['password']);
+                    $requete = "INSERT INTO t_users (ID_user, USERNAME, USERFNAME, USERMAIL, USERPASSWORD,USERDATEINS,T_ROLES_ID_ROLE) VALUES (NULL, '$nom', '$prenom','$email', '$mdp',NULL,5)";
+                    $db->query($requete);
+                    unset($db);
+                }
             }
         }else{
             die($requeteLogin);
