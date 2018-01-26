@@ -50,6 +50,7 @@ if(isset($_POST['formulaire2'])){
                         //$_SESSION['admin']=0;
                     }
                     $_SESSION['id']=$donnees['ID_USER'];
+                    $_SESSION['mdp']=$donnees['USERPASSWORD'];
                 }
 
                 echo "<a href=\"index.php?page=accueil\">Vous êtes bien identifié</a>";
