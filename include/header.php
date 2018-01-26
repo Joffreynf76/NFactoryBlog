@@ -12,6 +12,7 @@
 
 
         } else {
+            echo("<li><a href=\"index.php?page=monCompte\"><i class=\"fa fa-user\" aria-hidden=\"true\"></i> Mon compte</a></li>");
             echo("<li><a href=\"index.php?page=logout\"><i class=\"fa fa-sign-out\" aria-hidden=\"true\"></i> Logout</a></li>");
             echo("<li><a href=\"index.php?page=contact\"><i class=\"fa fa-comment\" aria-hidden=\"true\"></i> Contact</a></li>");
 
