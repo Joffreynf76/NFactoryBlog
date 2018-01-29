@@ -9,4 +9,5 @@
     <div class="bouton">
         <input type="submit" value="Connexion" name="formulaire2">
     </div>
+    <a href="index.php?page=recupMDP">Mot de passe oublié ?</a>
 </form>
