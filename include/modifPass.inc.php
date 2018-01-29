@@ -15,6 +15,7 @@
 
 <?php
 if(isset($_POST['valider'])){
+    $mail=$_GET['email'];
     $cle=$_GET['cle'];
     $clef=$_POST['clef'];
     $clef=sha1($clef);
@@ -23,7 +24,11 @@ if(isset($_POST['valider'])){
     $email=$_POST['email'];
     if($clef != $cle){
         echo "erreur";
-    } else {
+    }
+    if($mail!=$email){
+        echo "erreur";
+    }
+    else {
         $db=connectionPDO('localhost' , 'NFactoryBlog' , 'root' , '');
         $requete="UPDATE t_users SET USERPASSWORD='$mdp' WHERE USERMAIL='$email'";
         $result = $db->query($requete);
