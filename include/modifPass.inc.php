@@ -22,6 +22,7 @@ if(isset($_POST['valider'])){
     $mdp=$_POST['mdp'];
     $mdp=sha1($mdp);
     $email=$_POST['email'];
+
     if($clef != $cle){
         echo "erreur";
     }
