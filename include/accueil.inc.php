@@ -1,4 +1,8 @@
 <main>
+    <form method = "POST" action = "index.php?page=recherche">
+        <input type="text" name="recherche"/>
+        <input type="submit" value="Rechercher" />
+    </form>
 <?php
 
 echo("<h1>Accueil</h1>");
@@ -28,18 +32,15 @@ $result = $db->query($requete);
 
 
  while ($donnees= $result -> fetch()){
-     echo "<h2>";
+     $articleId = $donnees['ID_ARTICLE'];
+     echo "<h2><a href=\"index.php?page=afficheArticle&amp;id=$articleId\">";
      echo (html_entity_decode($donnees['ARTTITRE']));
-     echo "</h2>";
+     echo "</a></h2>";
      echo("<h3>");
      echo (html_entity_decode($donnees['ARTCHAPO']));
      echo("</h3>");
-     echo("<p>");
-     echo (html_entity_decode($donnees['ARTCONTENU']));
-     echo("</p>");
      echo $donnees['ARTDATE'];
      echo " ";
-     echo ($donnees['ARTAUTEUR']);
      if($donnees['CATLIBELLE']=='Web'){
          $id=2;
          echo("<p><a href='index.php?page=catArticle&amp;id=.$id.'>".$donnees['CATLIBELLE']."</a></p>");
