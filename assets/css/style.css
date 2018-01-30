@@ -168,3 +168,25 @@ margin-top: 50px;
 .forminscription {
     margin-top:25px;
 }
+
+.formlogin {
+    margin-top: 25px;
+}
+
+fieldset {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.forgetpass {
+    text-align: center;
+}
+
+.forgetpassa {
+    text-decoration: none;
+    color:black;
+}
+
+.forgetpassa:hover {
+    color:#DFA5D7;
+}
