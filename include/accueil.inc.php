@@ -68,6 +68,7 @@ for($i=1; $i<=$nombrePage; $i++)
     }
 }
 echo '</p>';
+
 unset($db);
 
 ?>
