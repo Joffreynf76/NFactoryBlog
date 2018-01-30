@@ -1,14 +1,14 @@
 
 <header>
     <ul>
-        <li><a href="index.php?page=accueil"><i class="fa fa-home" aria-hidden="true"></i> Accueil</a></li>
+        <li><a href="index.php?page=accueil" class="accueil1"><i class="fa fa-home" aria-hidden="true"></i> Accueil</a></li>
 
         <?php
 
         if (!isset($_SESSION['login'])) {
-            echo("<li><a href=\"index.php?page=inscription\"><i class=\"fa fa-address-book\" aria-hidden=\"true\"></i> Inscription</a></li>");
-            echo("<li><a href=\"index.php?page=authentification\"><i class=\"fa fa-sign-in\" aria-hidden=\"true\"></i> Login</a></li>");
-            echo("<li><a href=\"index.php?page=contact\"><i class=\"fa fa-comment\" aria-hidden=\"true\"></i> Contact</a></li>");
+            echo("<li><a href=\"index.php?page=inscription\" class='inscription'><i class=\"fa fa-address-book\" aria-hidden=\"true\"></i> Inscription</a></li>");
+            echo("<li><a href=\"index.php?page=authentification\" class='login'><i class=\"fa fa-sign-in\" aria-hidden=\"true\"></i> Login</a></li>");
+            echo("<li><a href=\"index.php?page=contact\" class='contact'><i class=\"fa fa-comment\" aria-hidden=\"true\"></i> Contact</a></li>");
 
 
         } else {

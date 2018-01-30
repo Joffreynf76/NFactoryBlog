@@ -1,7 +1,7 @@
 <main>
     <div class="recherche">
         <form method = "POST" action = "index.php?page=recherche">
-            <input type="text" name="recherche"/>
+            <input type="text" name="recherche" class="rechercher" placeholder="Votre recherche"/>
             <input type="submit" value="Rechercher" />
         </form>
     </div>
@@ -71,7 +71,7 @@ for($i=1; $i<=$nombrePage; $i++)
     }
 }
 echo '</p>';
-echo ("<a href='rss.php' class='flux'>Flux rss</a>");
+echo ("<p><a href='rss.php' class='flux'>Flux rss</a></p>");
 unset($db);
 
 ?>
