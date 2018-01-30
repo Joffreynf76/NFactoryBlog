@@ -1,5 +1,5 @@
 <?php
-echo("<h1>Inscription</h1>");
+
 if(isset($_POST['formulaire'])){
     $tabErreur = array();
     $nom=trim($_POST["nom"]);
