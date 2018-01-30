@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
 body {
     background-color: whitesmoke;
 }
@@ -67,3 +69,53 @@ p{
 
 }
 
+.titre {
+    text-decoration: none;
+    color:black;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+}
+
+.titre:hover {
+    color:grey;
+}
+
+.chapo {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+}
+
+.accueil {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+.recherche{
+margin-top: 50px;
+    margin-left:650px;
+}
+
+.web {
+    text-decoration: none;
+    color:black;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.web:hover {
+    color: grey;
+}
+
+.informatique {
+    text-decoration: none;
+    color:black;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.informatique:hover {
+    color:grey;
+}
+
+.flux {
+    text-decoration: none;
+    color:black;
+}
