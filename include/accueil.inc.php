@@ -48,7 +48,7 @@ $result = $db->query($requete);
      echo("<p><a href='index.php?page=catArticle&amp;id=.$idCat.' class='web'>".$donnees['CATLIBELLE']."</a></p>");
 
      echo "</div>";
-     echo("<hr>");
+
 
  }
 echo '<p align="center">Page : ';
