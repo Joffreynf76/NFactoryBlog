@@ -208,3 +208,13 @@ fieldset {
 .btncontact {
     margin-top: 25px;
 }
+
+.titre1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+}
+
+.contenu{
+    color:black;
+    font-family: Arial;
+}
