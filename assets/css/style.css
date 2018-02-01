@@ -48,7 +48,7 @@ div#main {
 
 footer {
 
-    background-color: grey;
+    background-color: snow;
 }
 
 main {
@@ -267,4 +267,17 @@ fieldset {
 
 .btn2 {
     margin-top: 20px;
+}
+
+.cle {
+    margin-top: 20px;
+}
+
+.emailrecup {
+    margin-top: 20px;
+}
+
+.newmdp {
+    margin-top: 20px;
+    margin-right: 50px;
 }

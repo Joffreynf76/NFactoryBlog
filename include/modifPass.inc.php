@@ -9,16 +9,16 @@ if(!isset($_GET['cle'])|| !isset($_GET['email'])){
 if(isset($_GET['cle'])&& isset($_GET['email'])) {
 
 echo ("<form method=\"post\" action=\"\">
-    <div>
+    <div class='cle'>
         <label for=\"cle\"> Clé de sécurité :</label><input type=\"password\" name=\"clef\">
     </div>
-    <div>
+    <div class='emailrecup'>
         <label for=\"email\">Adresse email :</label><input type=\"email\" name=\"email\">
     </div>
-    <div>
+    <div class='newmdp'>
         <label for=\"mdp\">Nouveau mot de passe :</label><input type=\"password\" name=\"mdp\">
     </div>
-    <div>
+    <div class='btn2'>
         <input type=\"submit\" value=\"Valider\" name=\"valider\">
     </div>
 </form>
