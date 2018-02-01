@@ -34,6 +34,7 @@ $result = $db->query($requete);
 
 
  while ($donnees= $result -> fetch()){
+     $idCat= $donnees['ID_CATEGORIE'];
      $articleId = $donnees['ID_ARTICLE'];
      echo"<div class='article'>";
      echo "<h2><a href=\"index.php?page=afficheArticle&amp;id=$articleId\" class='titre'>";
@@ -44,15 +45,8 @@ $result = $db->query($requete);
      echo("</h3>");
      echo $donnees['ARTDATE'];
      echo " ";
-     if($donnees['CATLIBELLE']=='Web'){
-         $id=2;
-         echo("<p><a href='index.php?page=catArticle&amp;id=.$id.' class='web'>".$donnees['CATLIBELLE']."</a></p>");
-     }
-     else {
-         $id=1;
-         echo("<p><a href='index.php?page=catArticle&amp;id=.$id.' class='informatique'>".$donnees['CATLIBELLE']."</a></p>");
+     echo("<p><a href='index.php?page=catArticle&amp;id=.$idCat.' class='web'>".$donnees['CATLIBELLE']."</a></p>");
 
-     }
      echo "</div>";
      echo("<hr>");
 
