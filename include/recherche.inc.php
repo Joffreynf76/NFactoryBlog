@@ -14,9 +14,9 @@ else {
     if(isset($_POST['recherche'])) {
         while ($donnees = $result ->fetch())
         {
-            echo ("<h2 class='titre1'>".html_entity_decode($donnees['ARTTITRE'])."</h2>");
+            echo ("<div class='affichart'><h2 class='titre1'>".html_entity_decode($donnees['ARTTITRE'])."</h2>");
             echo ("<h3 class='chapo'>".html_entity_decode($donnees['ARTCHAPO'])."</h3>");
-            echo ("<p class='contenu'>".html_entity_decode($donnees['ARTCONTENU'])."</p>");
+            echo ("<p class='contenu'>".html_entity_decode($donnees['ARTCONTENU'])."</p></div>");
         }
     }
 }

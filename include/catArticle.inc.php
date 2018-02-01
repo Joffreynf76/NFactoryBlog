@@ -4,10 +4,10 @@ $requete = $db -> prepare("SELECT * FROM t_categories_has_t_articles LEFT JOIN t
 $requete -> execute(array($_GET['id']));
 
 while($donnees = $requete ->fetch()) {
-    echo "<h2>";
+    echo "<div class='affichart'><h2 class='titre1'>";
     echo (html_entity_decode($donnees['ARTTITRE']));
     echo "</h2>";
-    echo("<h3>");
+    echo("<h3 class='chapo'>");
     echo (html_entity_decode($donnees['ARTCHAPO']));
     echo("</h3>");
     echo("<p>");
@@ -16,5 +16,5 @@ while($donnees = $requete ->fetch()) {
     echo $donnees['ARTDATE'];
     echo " ";
     echo ($donnees['ARTAUTEUR']);
-    echo("<hr>");
+    echo("</div>");
 }
