@@ -80,7 +80,7 @@ input {
 }
 
 form div label {
-    float:left;
+    /*float:left;*/
     width:100px;
 }
 
@@ -217,4 +217,30 @@ fieldset {
 .contenu{
     color:black;
     font-family: Arial;
+}
+
+.newNom {
+    margin-bottom: 15px;
+}
+
+.newPrenom {
+    margin-bottom: 15px;
+    margin-right: 30px;
+}
+
+.newEmail {
+    margin-bottom: 15px;
+    margin-right: 70px;
+}
+
+.mdp1 {
+    margin-bottom: 15px;
+}
+
+.article1:hover {
+    color:#7D38A5;
+}
+
+.admin:hover {
+    color:#D40000;
 }

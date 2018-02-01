@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_SESSION['login'])){
-    echo("<h1>Votre espace personel</h1>");
+    echo("<h1 class='titre1'>Votre espace personel</h1>");
     $id=$_SESSION['id'];
     $db=connectionPDO('localhost' , 'NFactoryBlog' , 'root' , '');
     $requete = "SELECT * FROM t_users WHERE ID_USER='$id'";
@@ -18,10 +18,18 @@ if(isset($_SESSION['login'])){
 
     if(isset($_POST['modifier'])){
         echo ("<form method='post' action='#'>
-            <label for='nom'>Nouveau nom : </label><input type='text' name='newNom'><br>
-            <label for='prenom'>Nouveau prénom : </label><input type='text' name='newPrenom'><br>
-            <label for='email'>Nouvelle adresse email : </label><input type='text' name='newEmail'><br>
-            <label for='mdp'>Mot de passe : </label><input type='password' name='mdp'><br>
+                  <div class='newNom'>
+                    <label for='nom'>Nouveau nom : </label><input type='text' name='newNom'>
+                  </div>
+                  <div class='newPrenom'>
+                    <label for='prenom'>Nouveau prénom : </label><input type='text' name='newPrenom'>
+                  </div>
+                  <div class='newEmail'>
+                    <label for='email'>Nouvelle adresse email : </label><input type='text' name='newEmail'>
+                  </div>
+                  <div class='mdp1'>
+                    <label for='mdp'>Mot de passe : </label><input type='password' name='mdp'>
+                  </div>
             <input type='submit' value='Modifier mes informations' name='newInfo'>
 </form>");
     }
