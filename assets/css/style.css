@@ -244,3 +244,27 @@ fieldset {
 .admin:hover {
     color:#D40000;
 }
+
+.titre2 {
+    margin-bottom: 15px;
+
+
+}
+
+.chapo2 {
+    margin-bottom: 15px;
+    margin-right: 30px;
+}
+
+.date {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.email3 {
+    margin-top: 20px;
+}
+
+.btn2 {
+    margin-top: 20px;
+}

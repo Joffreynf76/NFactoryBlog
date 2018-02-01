@@ -2,13 +2,13 @@
 
 
 <form method="post" action="#">
-    <div class="titre">
+    <div class="titre2">
         <label for="titre">Titre : </label><input type="text" name="titre">
     </div>
-    <div class="chapo">
+    <div class="chapo2">
         <label for="chapo">Sous titre : </label><input type="text" name="chapo">
     </div>
-    <div class="contenu">
+    <div class="contenu2">
         <label for="contenu">Contenu article :</label><textarea cols="40" rows="4" name="contenu"></textarea>
     </div>
     <div class="date">
