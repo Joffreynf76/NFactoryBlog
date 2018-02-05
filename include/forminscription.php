@@ -1,5 +1,7 @@
 <?php require('captcha.php'); ?>
-<form method="post" action="#">
+<fieldset>
+    <legend>Inscription</legend>
+<form method="post" action="#" class="forminscription">
     <div class="nom">
         <label for="nom">Nom : </label><input type="text" name="nom">
     </div>
@@ -20,3 +22,4 @@
         <input type="submit" value="S'inscrire" name="formulaire">
     </div>
 </form>
+</fieldset>

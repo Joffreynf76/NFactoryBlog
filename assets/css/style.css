@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
 body {
-    background-color: whitesmoke;
+    background-image: url("../img/fondblog.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 ul {
@@ -15,22 +19,36 @@ ul li {
 ul li a {
     text-decoration: none;
     color:black;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
-ul li a:hover {
-    color:gray;
+.accueil1:hover {
+    color:#d6287c;
+
+}
+.inscription:hover {
+    color:#007EC6;
 }
 
+.login:hover {
+    color:#E25600;
+}
+
+.contact:hover {
+    color:#4E7F00;
+}
 div#main {
     width:960px;
     margin:auto;
     text-align: center;
-    height: 900px;
+    height: auto;
+    background-color: rgba(220,220,220,0.45);
     
 }
 
 footer {
-    background-color: grey;
+
+    background-color: snow;
 }
 
 main {
@@ -53,12 +71,16 @@ main {
     height:30px;
 }
 
+.bouton {
+    margin-top:50px;
+}
+
 input {
     border-radius: 3px;
 }
 
 form div label {
-    float:left;
+    /*float:left;*/
     width:100px;
 }
 
@@ -67,3 +89,216 @@ p{
 
 }
 
+.titre {
+    text-decoration: none;
+    color:black;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+}
+
+.titre:hover {
+    color:#AB0022;
+}
+
+.chapo {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+}
+
+.accueil {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+
+.recherche{
+margin-top: 50px;
+    margin-left:650px;
+}
+
+.web {
+    text-decoration: none;
+    color:black;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.web:hover {
+    color: #FAD7A4;
+}
+
+.informatique {
+    text-decoration: none;
+    color:black;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.informatique:hover {
+    color:#FAD7A4;
+}
+
+.flux {
+    text-decoration: none;
+    color:black;
+    text-align: left;
+}
+
+.article {
+    background-color: snow;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 20px;
+    overflow: hidden;
+    border: none;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(0,0,0,1) ;
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0,1) ;
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    -webkit-transform: rotateX(30.939720937064457deg) rotateY(-5.156620156177409deg)   ;
+    transform: rotateX(30.939720937064457deg) rotateY(-5.156620156177409deg)   ;
+}
+
+.rechercher {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: 1px solid #b7b7b7;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal 16px/normal "Times New Roman", Times, serif;
+    /*color: rgba(0,142,198,1);*/
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(255,255,255,1);
+    -webkit-box-shadow: 1px 1px 1px 0 rgba(132,128,128,1) inset;
+    box-shadow: 1px 1px 1px 0 rgba(132,128,128,1) inset;
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.forminscription {
+    margin-top:25px;
+}
+
+.formlogin {
+    margin-top: 25px;
+}
+
+fieldset {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.forgetpass {
+    text-align: center;
+}
+
+.forgetpassa {
+    text-decoration: none;
+    color:black;
+}
+
+.forgetpassa:hover {
+    color:#DFA5D7;
+}
+
+.email2 {
+    margin-top: 25px;
+}
+
+.sujet {
+    margin-top: 25px;
+}
+
+.message2 {
+    margin-top: 25px;
+}
+
+.btncontact {
+    margin-top: 25px;
+}
+
+.titre1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: normal;
+}
+
+.contenu{
+    color:black;
+    font-family: Arial;
+}
+
+.newNom {
+    margin-bottom: 15px;
+}
+
+.newPrenom {
+    margin-bottom: 15px;
+    margin-right: 30px;
+}
+
+.newEmail {
+    margin-bottom: 15px;
+    margin-right: 70px;
+}
+
+.mdp1 {
+    margin-bottom: 15px;
+}
+
+.article1:hover {
+    color:#7D38A5;
+}
+
+.admin:hover {
+    color:#D40000;
+}
+
+.titre2 {
+    margin-bottom: 15px;
+
+
+}
+
+.chapo2 {
+    margin-bottom: 15px;
+    margin-right: 30px;
+}
+
+.date {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.email3 {
+    margin-top: 20px;
+}
+
+.btn2 {
+    margin-top: 20px;
+}
+
+.cle {
+    margin-top: 20px;
+}
+
+.emailrecup {
+    margin-top: 20px;
+}
+
+.newmdp {
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+.affichart {
+    background-color: snow;
+    border-radius: 5px;
+
+}

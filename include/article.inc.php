@@ -1,6 +1,6 @@
 <?php
 
-echo("<h1>Article</h1>");
+echo("<h1 class='titre1'>Article</h1>");
 if(isset($_SESSION['admin'])) {
     if (isset($_POST['formulaire3'])) {
         $tabErreur = array();

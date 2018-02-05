@@ -1,7 +1,13 @@
 <main>
+    <div class="recherche">
+        <form method = "POST" action = "index.php?page=recherche">
+            <input type="text" name="recherche" class="rechercher" placeholder="Votre recherche"/>
+            <input type="submit" value="Rechercher" />
+        </form>
+    </div>
 <?php
 
-echo("<h1>Accueil</h1>");
+echo("<h1 class='accueil'>Accueil</h1>");
 $db=connectionPDO('localhost' , 'NFactoryBlog' , 'root' , '');
 $articleParPage=3;
 $retourTotal= $db -> query("SELECT COUNT(*) AS total FROM t_articles");
@@ -28,29 +34,21 @@ $result = $db->query($requete);
 
 
  while ($donnees= $result -> fetch()){
-     echo "<h2>";
+     $idCat= $donnees['ID_CATEGORIE'];
+     $articleId = $donnees['ID_ARTICLE'];
+     echo"<div class='article'>";
+     echo "<h2><a href=\"index.php?page=afficheArticle&amp;id=$articleId\" class='titre'>";
      echo (html_entity_decode($donnees['ARTTITRE']));
-     echo "</h2>";
-     echo("<h3>");
+     echo "</a></h2>";
+     echo("<h3 class='chapo'>");
      echo (html_entity_decode($donnees['ARTCHAPO']));
      echo("</h3>");
-     echo("<p>");
-     echo (html_entity_decode($donnees['ARTCONTENU']));
-     echo("</p>");
      echo $donnees['ARTDATE'];
      echo " ";
-     echo ($donnees['ARTAUTEUR']);
-     if($donnees['CATLIBELLE']=='Web'){
-         $id=2;
-         echo("<p><a href='index.php?page=catArticle&amp;id=.$id.'>".$donnees['CATLIBELLE']."</a></p>");
-     }
-     else {
-         $id=1;
-         echo("<p><a href='index.php?page=catArticle&amp;id=.$id.'>".$donnees['CATLIBELLE']."</a></p>");
+     echo("<p><a href='index.php?page=catArticle&amp;id=.$idCat.' class='web'>".$donnees['CATLIBELLE']."</a></p>");
 
-     }
+     echo "</div>";
 
-     echo("<hr>");
 
  }
 echo '<p align="center">Page : ';
@@ -67,6 +65,7 @@ for($i=1; $i<=$nombrePage; $i++)
     }
 }
 echo '</p>';
+echo ("<p><a href='rss.php' class='flux'>Flux rss</a></p>");
 unset($db);
 
 ?>
